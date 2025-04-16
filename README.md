@@ -15,13 +15,10 @@ Calculadora VLSM es una aplicación desarrollada en Android que permite calcular
   - Número total de hosts
 
 ## Capturas de pantalla
-
-### Pantalla principal
-![Pantalla principal](https://raw.githubusercontent.com/Jeremy091/CalculadoraVLSM/main/screenshots/pantalla_principal.png)
-
-### Resultados del cálculo
-![Resultados del cálculo](https://raw.githubusercontent.com/Jeremy091/CalculadoraVLSM/main/screenshots/resultados_calculo.png)
-
+![Descripción de la imagen](imagenes/1.png)
+![Descripción de la imagen](imagenes/2.png)
+![Descripción de la imagen](imagenes/3.png)
+![Descripción de la imagen](imagenes/4.png)
 ## Cómo usar
 
 1. Ingresa la dirección IP base (por ejemplo, `192.168.1.0`).
