@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Entrada para Dirección IP -->
+        <EditText
+            android:id="@+id/direccionIP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dirección IP (ej. 192.168.1.0)"
+            android:inputType="text" />
+
+        <!-- Entrada para Prefijo de red -->
+        <EditText
+            android:id="@+id/prefijoSubred"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Prefijo de red (ej. 24)"
+            android:inputType="number" />
+
+        <!-- Entrada para Número de Subredes -->
+        <EditText
+            android:id="@+id/numSubredes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número de subredes"
+            android:inputType="number" />
+
+        <!-- Contenedor para los inputs de cada subred -->
+        <LinearLayout
+            android:id="@+id/inputsSubred"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp" />
+
+        <!-- Botón para calcular -->
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calcular VLSM"
+            android:layout_marginTop="16dp" />
+
+        <!-- HorizontalScrollView para la tabla -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:scrollbars="horizontal">
+
+            <TableLayout
+                android:id="@+id/tableResults"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:background="#e0f7fa">
+
+                <!-- Fila de cabecera -->
+                <TableRow>
+                    <TextView style="@style/TableHeaderText" android:text="Subred" />
+                    <TextView style="@style/TableHeaderText" android:text="IP" />
+                    <TextView style="@style/TableHeaderText" android:text="Máscara" />
+                    <TextView style="@style/TableHeaderText" android:text="Gateway" />
+                    <TextView style="@style/TableHeaderText" android:text="Broadcast" />
+                    <TextView style="@style/TableHeaderText" android:text="Rango Hosts" />
+                    <TextView style="@style/TableHeaderText" android:text="Hosts" />
+                </TableRow>
+
+            </TableLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+</ScrollView>
